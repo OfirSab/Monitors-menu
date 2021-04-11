@@ -15,23 +15,8 @@ const Item = ({name,monitors}) => {
                     <a className="dropdown-item" key={index} href="#">{monitor.Name}</a>
                 )
             })}
-            {/* {isOpen && links.map((link,index)=>{
-                return(
-                    <a className="dropdown-item" key={index} href="#">{link.title}</a>
-                )
-            })} */}
         </div>
     </li>
-    //   <div onClick={() => openNav()}>
-    //     <h1>item</h1>
-    //     {isOpen && links.map((link,index)=>{
-    //         return(
-    //             <div key={index}>
-    //                 <p>{link.title}</p>
-    //             </div>
-    //         )
-    //     })}
-    //   </div>
     )
 }
 
