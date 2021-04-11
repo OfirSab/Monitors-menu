@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Item = ({name,links}) => {
+const Item = ({name,monitors}) => {
     const [isOpen, setOpen] = React.useState(false)
 
     const openNav = () =>{
@@ -10,6 +10,11 @@ const Item = ({name,links}) => {
         <li className="nav-item dropdown" onClick={() => openNav()}>
         <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">{name}</a>
         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+            {isOpen && monitors.map((monitor,index)=>{
+                return(
+                    <a className="dropdown-item" key={index} href="#">{monitor.Name}</a>
+                )
+            })}
             {/* {isOpen && links.map((link,index)=>{
                 return(
                     <a className="dropdown-item" key={index} href="#">{link.title}</a>
