@@ -1,7 +1,6 @@
 import React from 'react'
 
-const Item = ({items}) => {
-    const {name,links} = items;
+const Item = ({name,links}) => {
     const [isOpen, setOpen] = React.useState(false)
 
     const openNav = () =>{
@@ -11,11 +10,11 @@ const Item = ({items}) => {
         <li className="nav-item dropdown" onClick={() => openNav()}>
         <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">{name}</a>
         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-            {isOpen && links.map((link,index)=>{
+            {/* {isOpen && links.map((link,index)=>{
                 return(
                     <a className="dropdown-item" key={index} href="#">{link.title}</a>
                 )
-            })}
+            })} */}
         </div>
     </li>
     //   <div onClick={() => openNav()}>

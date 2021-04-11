@@ -3,6 +3,7 @@ import Item from './Item'
 import { NavItems } from '../data/Data'
 
 const Navbar = () => {
+
     return (
       <div>
         {/* <nav className="navbar navbar-expand-md navbar-dark bg-dark">
@@ -42,8 +43,8 @@ const Navbar = () => {
 
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav ml-auto">
-                    {NavItems.map((navItem,index)=>{
-                    return <Item key={index} items={navItem}/>
+                    {NavItems.MonitorType.map((navItem,index)=>{
+                    return <Item key={index} name={NavItems.MonitorType[index].Name}/>
                     })}
                     {/* <li className="nav-item active">
                         <a href="#" className="nav-link">Home</a>
