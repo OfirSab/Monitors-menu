@@ -21,7 +21,7 @@ const Navbar = () => {
                                 monitors.push(i)
                                 }
                             })
-                        return <Item key={index} name={NavItems.MonitorType[index].Name} monitors={monitors}/>
+                        return <Item key={index} name={NavItems.MonitorType[index].Name} monitors={monitors} legendNumber={NavItems.MonitorType[index].LegentId}/>
                         })}
                     </ul>
                 </div>

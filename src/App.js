@@ -1,15 +1,23 @@
 import './App.css';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Legend from './components/Legend'
 function App() {
-  const num = 0;
   return (
+    <Router>
     <div className="App">
       <header className="App-header">
       <Navbar/>
       </header>
-      <Legend legendId={num}/>
+      <Switch>
+        {/* <Route path="/legend/:legendNumber" component={Legend}/> */}
+        <Route exact path="/legend/:legendNumber" render={ props =>(
+              <Legend { ...props }/>
+            )}/>
+      </Switch>
+      {/* <Legend legendId={num}/> */}
     </div>
+    </Router>
   );
 }
 
