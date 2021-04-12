@@ -4,17 +4,39 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
+
+<b>For convenience you can see this repository on Heroku server:</b>
+https://monitors-type.herokuapp.com/
+
+For running this project:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br/>
+Runs the app in the development mode.
+Open [http://localhost:3000]
+<br/>
+You should also install the following commands:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `npm init`
 
-### `npm test`
+<br/>
+<b>&&</b>
+<br/>
+
+### `npm react-route-dom`
+
+<br/>
+<br/>
+
+![image](https://user-images.githubusercontent.com/59650183/114415887-c49f6400-9bb8-11eb-92e3-ec6af7ebd053.png)
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
