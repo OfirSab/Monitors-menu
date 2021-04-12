@@ -1,9 +1,9 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project deploy monitors type. Each monitor have diffrent legend.
+For deploy the legend select monitor from the dropdown list./
 
 ## Available Scripts
-
 
 <b>For convenience you can see this repository on Heroku server:</b>
 https://monitors-type.herokuapp.com/
@@ -35,8 +35,6 @@ You should also install the following commands:
 <br/>
 <br/>
 <br/>
-
-
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
