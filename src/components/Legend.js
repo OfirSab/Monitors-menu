@@ -1,51 +1,36 @@
 import React, { Component , Fragment } from "react";
 import { NavItems } from '../data/Data'
+import Tag from './Tag'
 
 class Legend extends Component {
-    componentDidMount() {
-        console.log(this.props.match.params.legendNumber);
-        
-    }
-    componentDidUpdate(){
-            if(this.state.legendNumber != this.props.match.params.legendNumber){
-                console.log("change from:" + this.state.legendNumber + "to: " + this.props.match.params.legendNumber);
-                this.state.legendNumber = this.props.match.params.legendNumber;
-                
-            }
-    }
-    state = {
-        tags: [],
-        colors:[],
-        legendNumber: null,
-    } 
-
-
     render(){
-        const { tags, colors, legendNumber} = this.state
-        console.log("legent from legend: " +legendNumber);
-        NavItems.Legends.map((legend)=>{
-            if(legend.Id == legendNumber){
-                legend.tags.map((tag,index)=>{
-                    tags.push(tag.Label)
-                    colors.push({backgroundColor:tag.Color})
+        var legendNumber = this.props.match.params.legendNumber
+        if(legendNumber){
+            var tags = [];
+            var colors = [];
+            var tagList = [];
+            NavItems.Legends.map((legend)=>{
+                if(legend.Id == legendNumber){
+                    legend.tags.map((tag,index)=>{
+                        tags.push(tag.Label)
+                        colors.push({backgroundColor:tag.Color})
+                    })
+                }
                 })
-                
-            }
-            })
+            tagList = tags.map((tag,index) => (
+                <Tag tag={tag} key={index} index={index} color={colors[index]}/>
+            ))
         return (
          (legendNumber && <div className="container">
                 <ul className="list-group">
-              {tags.map((tag,index) => (
-                <li key={index} className="list-group-item">
-                    <div className="tag">
-                        <div className="tag-color" style={ colors[index] } />
-                        <p>{tag}</p>
-                    </div>
-                </li>
-              ))}
+              {tagList}
             </ul>
           </div>)
         )
+        }else{
+            return <h2>Choose Monitor type</h2>
+        }
+
       }
     
     }
