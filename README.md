@@ -24,7 +24,7 @@ You should also install the following commands:
 <b>&&</b>
 <br/>
 
-### `npm react-route-dom`
+### `npm i react-route-dom`
 
 <br/>
 <br/>
